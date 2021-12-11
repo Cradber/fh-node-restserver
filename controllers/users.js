@@ -6,6 +6,13 @@ const GetUsers = (req, res = response) => {
     })
 }
 
+const PostUsers = (req, res = response) => {
+    res.json({
+        msg: "'Put API – Controller"
+    })
+}
+
 module.exports = {
-    GetUsers
+    GetUsers,
+    PostUsers
 }
