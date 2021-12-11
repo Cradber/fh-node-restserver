@@ -30,6 +30,12 @@ class Server {
                 msg: "'Put API"
             })
         })
+
+        this.app.post('/api', (req, res) => {
+            res.json({
+                msg: "'Post API"
+            })
+        })
     }
 
     listen() {
