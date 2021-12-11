@@ -18,8 +18,15 @@ const PutUsers = (req, res = response) => {
     })
 }
 
+const DeleteUsers = (req, res = response) => {
+    res.json({
+        msg: "'Delete API – Controller"
+    })
+}
+
 module.exports = {
     GetUsers,
     PostUsers,
-    PutUsers
+    PutUsers,
+    DeleteUsers
 }
