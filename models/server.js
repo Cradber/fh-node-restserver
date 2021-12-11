@@ -36,6 +36,12 @@ class Server {
                 msg: "'Post API"
             })
         })
+
+        this.app.delete('/api', (req, res) => {
+            res.json({
+                msg: "'Delete API"
+            })
+        })
     }
 
     listen() {
