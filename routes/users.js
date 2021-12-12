@@ -9,7 +9,7 @@ const router = Router()
 
 router.get('/', GetUsers)
 
-router.put('/', PutUsers)
+router.put('/:id', PutUsers)
 
 router.post('/', PostUsers)
 
