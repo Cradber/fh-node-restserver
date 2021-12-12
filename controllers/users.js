@@ -17,8 +17,11 @@ const PostUsers = (req, res = response) => {
 }
 
 const PutUsers = (req, res = response) => {
+    const {id} = req.params
+
     res.json({
-        msg: "'Post API – Controller"
+        msg: "'Pu API – Controller",
+        id
     })
 }
 
