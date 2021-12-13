@@ -7,7 +7,7 @@ const {GetUsers,
     PostUsers,
     DeleteUsers} = require("../controllers/users");
 const {validateFields} = require("../middlewares/validateFields");
-const {isRoleValid} = require("../helpers/dbValidator");
+const {isRoleValid, isEmailExist} = require("../helpers/dbValidator");
 
 const router = Router()
 
@@ -18,7 +18,7 @@ router.put('/:id', PutUsers)
 router.post('/', [
     check('name', 'Name required').not().isEmpty(),
     check('password', 'Password required and longer than 6 characters').isLength({min: 6}),
-    check('email', 'Invalid email').isEmail(),
+    check('email').custom(isEmailExist),
     check('role').custom(isRoleValid),
     validateFields
 ], PostUsers)
